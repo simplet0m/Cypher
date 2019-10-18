@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="common_border_color">#303F9F</color>
+    <color name="background">#FFFFFF</color>
+    <color name="colorAccent">#FF4081</color>
+    <!-- Background color for box one -->
+    <color name="box_start">#FD8E09</color>
+    <!-- Background color for box two -->
+    <color name="main">#E06E09</color>
+    <!-- Background color for box three -->
+    <color name="box_three">#379237</color>
+    <!-- Background color for box four -->
+    <color name="box_four">#846749</color>
+</resources>
