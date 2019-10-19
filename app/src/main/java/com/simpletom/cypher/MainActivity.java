@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
 
     private StringBuilder encrypted;
 
-    private int touch = 1;
+    private int touch = 0;
     private int level = 1;
 
     private TextView main;
@@ -75,10 +75,10 @@ public class MainActivity extends Activity {
     }
     @Override
     public boolean onTouchEvent(MotionEvent motionEvent) {
-        if (level == 1 && touch == 1) {
+        if (level == 1 && touch == 0) {
             switch (motionEvent.getAction() & MotionEvent.ACTION_MASK) {
                 case MotionEvent.ACTION_UP:
-                    touch = 2;
+                    touch = 1;
                     main.setText("Break the code to move \n on to the next level");
                     encryptL1();
                     play();
@@ -87,10 +87,10 @@ public class MainActivity extends Activity {
                     break;
             }
         }
-        if (level == 2 && touch == 1) {
+        if (level == 2 && touch == 0) {
             switch (motionEvent.getAction() & MotionEvent.ACTION_MASK) {
                 case MotionEvent.ACTION_UP:
-                    touch = 2;
+                    touch = 1;
                     main.setText("Have a go at this one then");
                     encryptL1();
                     play();
@@ -115,11 +115,11 @@ public class MainActivity extends Activity {
             level++;
             reset();
             ansField.setText("");
-            touch = 1;
+            touch = 0;
         }
         else{
             main.setText("WRONG");
-            touch = 1;
+
         }
     }
     public void play(){
